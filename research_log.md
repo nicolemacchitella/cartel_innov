@@ -34,6 +34,7 @@ Pipeline: `01_load` → `02_clean` → `03_panel` → `04_estimate`.
 - **22/09/2026** — Industry mapping: NACE Rev.2 → ISIC4 by table lookup. All listed codes treated; 2-digit codes expand to the division, flagged `treat_2d` (27% of treated cell-years; robustness: set missing).
 - **22/09/2026** — Timing: firm-level dates. `expo` = distinct cartelised days / days in year (overlapping participants counted once). Main: `treated = expo ≥ 0.5`; robustness: `expo > 0`.
 - **22/09/2026** — All sectors kept; treated ISIC3 with no patents (453, 462, 502, 511) drop out.
+- **23/09/2026** — Declared scope saved as scope_long.parquet (segment dates, year-level overlap; EU/EEA aggregates expanded to members by year; explicit lists literal; 1 infringements without scope).
 
 ---
 
